@@ -68,7 +68,7 @@ class RepoCard extends Component {
             {this.props.repo.html_url}
           </a>
           <br></br>
-          <img src={this.state.url} height={600} />
+          <img src={this.state.url} height={"70%"} width={"70%"} />
         </CardContent>
       </Card>
     );
