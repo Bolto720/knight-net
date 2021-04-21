@@ -40,7 +40,7 @@ class RepoCard extends Component {
         super(props);
         this.state = {url: ""};
     }
-  componentWillMount() {
+  componentDidMount() {
     import(`./images/${this.props.repo.name.replace("-", "")}.png`).then(
       (image) => {
         this.setState({ url: image.default });
