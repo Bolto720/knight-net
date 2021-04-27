@@ -18,6 +18,7 @@ export default class Repo extends Component {
       baseURL(`bevy-roguelike`),
       baseURL(`logue`),
       baseURL(`RustWebServer`),
+      baseURL(`DeeperAndDeeper`),
     ];
 
     await axios
@@ -37,7 +38,7 @@ export default class Repo extends Component {
   render() {
     const { repos, language } = this.state;
 
-    if (repos.length < 4) {
+    if (repos.length < 5) {
       return null;
     }
 
