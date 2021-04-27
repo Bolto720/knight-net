@@ -1,2 +1,0 @@
-(this["webpackJsonpknight-net"]=this["webpackJsonpknight-net"]||[]).push([[6],{76:function(e,t,i){"use strict";i.r(t),t.default=i.p+"static/media/bevyroguelike.e09e3c39.png"}}]);
-//# sourceMappingURL=6.fc7dd126.chunk.js.map

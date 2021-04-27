@@ -1,2 +1,0 @@
-(this["webpackJsonpknight-net"]=this["webpackJsonpknight-net"]||[]).push([[7],{77:function(t,e,n){"use strict";n.r(e),e.default=n.p+"static/media/logue.5268b9e5.png"}}]);
-//# sourceMappingURL=7.9d9e6cac.chunk.js.map
