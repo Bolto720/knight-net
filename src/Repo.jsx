@@ -6,14 +6,14 @@ import RepoCard from "./RepoCard";
 
 export default class Repo extends Component {
   state = {
-    repo: [],
+    repos: [],
     language: [],
   };
 
   async componentDidMount() {
     const api_key = process.env.REACT_APP_API_KEY;
 
-    let repo = [
+    let repoUrls = [
       baseURL(`SiconEPOS`),
       baseURL(`bevy-roguelike`),
       baseURL(`logue`),
@@ -24,25 +24,29 @@ export default class Repo extends Component {
       .get("https://github-lang-deploy.herokuapp.com/")
       .then(async (res) => await this.setState({ language: res.data }));
 
-    repo.map(
+    repoUrls.map(
       async (url) =>
         await axios.get(url).then(async (res) => {
           await this.setState({
-            repo: [...this.state.repo, res.data],
+            repos: [...this.state.repos, res.data],
           });
         })
     );
   }
 
-
   render() {
-    const { repo, language } = this.state;
-    console.log(repo);
+    const { repos, language } = this.state;
+
+    if (repos.length < 4) {
+      return null;
+    }
+
+    console.log(repos);
     return (
       <div>
         <Grid className="grid">
-          {repo.map((data, i) => (
-              <RepoCard repo={data} key={i} language={language} />
+          {repos.map((data, i) => (
+            <RepoCard repo={data} key={i} language={language} />
           ))}
         </Grid>
       </div>
@@ -50,10 +54,9 @@ export default class Repo extends Component {
   }
 }
 
-
 const useStyles = makeStyles((theme) => ({
-      grid: {
-          padding: theme.spacing(8),
-          margin: theme.spacing(8),
-      }
-}))
+  grid: {
+    padding: theme.spacing(8),
+    margin: theme.spacing(8),
+  },
+}));
