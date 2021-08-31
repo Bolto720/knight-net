@@ -1,4 +1,4 @@
 const baseURL = (repo) =>
-    `https://api.github.com/repos/bolto720/${repo}`;
+    `https://api.github.com/repos/tomknightdev/${repo}`;
 
 export default baseURL;
