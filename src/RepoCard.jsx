@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {
-  makeStyles,
   Card,
   CardHeader,
   CardContent,
@@ -33,7 +32,6 @@ const useStyles = (theme) => ({
     color: "#50fa7b",
   },
 });
-// const classes = useStyles();
 
 class RepoCard extends Component {
     constructor(props) {
@@ -50,9 +48,6 @@ class RepoCard extends Component {
   }
 
   render() {
-    const image = import(
-      `./images/${this.props.repo.name.replace("-", "")}.png`
-    );
     const {classes} = this.props;
     return (
       <Card className={classes.card}>
@@ -68,7 +63,7 @@ class RepoCard extends Component {
             {this.props.repo.html_url}
           </a>
           <br></br>
-          <img src={this.state.url} height={"70%"} width={"70%"} />
+          <img alt={this.state.url} src={this.state.url} height={"70%"} width={"70%"} />
         </CardContent>
       </Card>
     );

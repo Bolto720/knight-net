@@ -11,8 +11,6 @@ export default class Repo extends Component {
   };
 
   async componentDidMount() {
-    const api_key = process.env.REACT_APP_API_KEY;
-
     let repoUrls = [
       baseURL(`SiconEPOS`),
       baseURL(`bevy-roguelike`),
@@ -54,10 +52,3 @@ export default class Repo extends Component {
     );
   }
 }
-
-const useStyles = makeStyles((theme) => ({
-  grid: {
-    padding: theme.spacing(8),
-    margin: theme.spacing(8),
-  },
-}));
