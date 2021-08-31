@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
 import baseURL from "./api/github";
-import { makeStyles, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import RepoCard from "./RepoCard";
 
 export default class Repo extends Component {
